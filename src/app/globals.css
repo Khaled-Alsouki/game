@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  /* منع تحديد النص أثناء اللعب السريع */
+  button {
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  /* الأرقام والتسلسلات تبقى من اليسار لليمين حتى داخل صفحة RTL */
+  .ltr-seq {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+}
